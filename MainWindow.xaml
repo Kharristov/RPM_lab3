@@ -18,7 +18,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <TextBlock Name="TXTBLOCK" Background="Orange" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+        <TextBlock Name="TXTBLOCK" Background="#FFB5AA97" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
         <Menu Background="White" BorderBrush="Navy" BorderThickness="1" Width="auto" Height="40" HorizontalAlignment="Left" VerticalAlignment="Top">
             <MenuItem Header="Меню" Height="36" Width="87" FontSize="24" RenderTransformOrigin="0.25,0.647">
                 <MenuItem.Background>
@@ -26,11 +26,11 @@
                 </MenuItem.Background>
 
                 <MenuItem Header="Цвет фона">
-                    <MenuItem Header="Синий" Click="ChangeWindowColor"/>
-                    <MenuItem Header="Красный" Click="ChangeWindowColor"/>
-                    <MenuItem Header="Зеленый" Click="ChangeWindowColor"/>
+                    <MenuItem Header="Песочный" Click="ChangeWindowColor"/>
+                    <MenuItem Header="Светлый" Click="ChangeWindowColor"/>
+                    <MenuItem Header="Серый" Click="ChangeWindowColor"/>
                 </MenuItem>
-                <MenuItem Header="_Инфо о разработчике"Click="Text"/>
+                <MenuItem Header="_Инфо о разработчике" Click="About_Click"/>
                 <Separator />
                 <MenuItem Header="_Закрыть" Click="CloseWindow"/>
                 

@@ -23,12 +23,12 @@ namespace lab3 {
             MenuItem menuItem = (MenuItem)sender;
             string color = menuItem.Header.ToString();
 
-            if(color == "Синий") {
-                TXTBLOCK.Background = Brushes.Blue;
-            } else if(color == "Красный") {
-                TXTBLOCK.Background = Brushes.Red;
-            } else if(color == "Зеленый") {
-                TXTBLOCK.Background = Brushes.Green;
+            if(color == "Песочный") {
+                TXTBLOCK.Background = Brushes.Tan;
+            } else if(color == "Светлый") {
+                TXTBLOCK.Background = Brushes.PapayaWhip;
+            } else if(color == "Серый") {
+                TXTBLOCK.Background = Brushes.LightGray;
             }
 
         }
@@ -37,6 +37,10 @@ namespace lab3 {
         }
         private void Text(object sender, RoutedEventArgs e) {
             this.Close();
+        }
+        private void About_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Разработчик: Вахрушева Анна", "О разработчике", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
