@@ -10,37 +10,60 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace lab3 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
         }
-
 
         private void ChangeWindowColor(object sender, RoutedEventArgs e) {
             MenuItem menuItem = (MenuItem)sender;
             string color = menuItem.Header.ToString();
 
             if(color == "Песочный") {
-                TXTBLOCK.Background = Brushes.Tan;
+                MainGrid.Background = Brushes.Tan;
             } else if(color == "Светлый") {
-                TXTBLOCK.Background = Brushes.PapayaWhip;
+                MainGrid.Background = Brushes.PapayaWhip;
             } else if(color == "Серый") {
-                TXTBLOCK.Background = Brushes.LightGray;
+                MainGrid.Background = Brushes.LightGray;
             }
-
         }
+
         private void CloseWindow(object sender, RoutedEventArgs e) {
             this.Close();
         }
-        private void Text(object sender, RoutedEventArgs e) {
-            this.Close();
-        }
+
         private void About_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Разработчик: Вахрушева Анна", "О разработчике", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Разработчик: Вахрушева Анна", "О разработчике", MessageBoxButton.OK, MessageBoxImage.Information); 
         }
+
+        private void MenuItem_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if(sender is FrameworkElement el)
+            {
+                StText.Text = el.Tag.ToString();
+            }
+        }
+
+        private void MenuItem_MouseLeave(object sender, MouseEventArgs e)
+        {
+            StText.Text = ""; 
+        }
+
+        private void ChageWndColorTan(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = Brushes.Tan;
+        }
+
+        private void ChageWndColorPapayaWhip(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = Brushes.PapayaWhip;
+        }
+
+        private void PapayaLightGray(object sender, RoutedEventArgs e)
+        {
+            MainGrid.Background = Brushes.LightGray;
+        }
+
     }
 }
